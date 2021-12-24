@@ -8,4 +8,4 @@ class Phonebook (models.Model):
     phone = models.TextField
 
     def __str__(self):
-        return self.name + '===' + self.phone
+        return self.name + "===" + self.phone
