@@ -24,12 +24,19 @@
     </p>
   </h4>
 
-  <h4 style="color:green" v-for="ppl in phone_book" :key="ppl">
-    {{ ppl.name}}
+  <h4 v-for="ppl in phone_book" :key="ppl">
+    <p v-if="ppl.name=='Code'" style="color:orange">
+      {{ ppl.name}}
+    </p>
+    <p v-else style="color:lime">
+      {{ ppl.name }}
+    </p>
   </h4>
 
-  <h4 style="color:crimson" v-for="ppl in phone_book" :key="ppl">
-    {{ ppl.number}}
+  <h4 v-for="ppl in phone_book" :key="ppl">
+    <p>
+      {{ ppl.number}}
+    </p>
   </h4>
 
 </div>
