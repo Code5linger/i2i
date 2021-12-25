@@ -9,7 +9,7 @@
 export default {
   data() {
     return {
-      test: "test"
+      test: "another test"
     }
   }
 }
