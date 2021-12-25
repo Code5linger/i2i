@@ -14,6 +14,24 @@
       {{ test_array}}
     </li>
   </ol>
+
+  <h4 v-for="ppl in phone_book" :key="ppl">
+    <p v-if="ppl.name=='Code'" style="color:blue">
+      {{ ppl.name }} >>> {{ ppl.number}}
+    </p>
+    <p v-else style="color:purple">
+      {{ ppl.name }} >>> {{ ppl.number}}
+    </p>
+  </h4>
+
+  <h4 style="color:green" v-for="ppl in phone_book" :key="ppl">
+    {{ ppl.name}}
+  </h4>
+
+  <h4 style="color:crimson" v-for="ppl in phone_book" :key="ppl">
+    {{ ppl.number}}
+  </h4>
+
 </div>
 </template>
 
@@ -26,6 +44,12 @@ export default {
       test_num: 17,
       test_array: [
         1,2,3,4,5,6,7
+      ],
+      phone_book: [
+        { name: 'Code', number: '011111111111'},
+        { name: 'Slinger', number: '099999999999'},
+        { name: 'Code', number: '011111111111'},
+        { name: 'Slinger', number: '099999999999'}
       ]
     }
   }
