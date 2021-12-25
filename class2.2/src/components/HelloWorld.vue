@@ -6,6 +6,8 @@
   <h4>{{ test_num }}</h4>
   <h5>{{ test_array }}</h5>
 
+  <button @click="kaj">Click Here</button>
+
   <ol>
     <li v-for="test_array in test_array" :key="test_array">
       {{ test_array }}
@@ -34,7 +36,10 @@
   </h4>
 
   <h4 v-for="ppl in phone_book" :key="ppl">
-    <p>
+    <p v-if="ppl.number=='011111111111'" style="color: gray">
+      {{ ppl.number}}
+    </p>
+    <p v-else style="color: brown">
       {{ ppl.number}}
     </p>
   </h4>
@@ -58,6 +63,15 @@ export default {
         { name: 'Code', number: '011111111111'},
         { name: 'Slinger', number: '099999999999'}
       ]
+    }
+  },
+  methods: {
+    kaj () {
+      alert(">_<")
+      this.kaj2();
+    },
+    kaj2 () {
+      alert('o_O')
     }
   }
 }
