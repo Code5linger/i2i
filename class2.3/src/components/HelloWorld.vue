@@ -1,104 +1,14 @@
 <template>
   <div>
-    <!--Use directive to print all numbers in an array-->
+  <!--Nest all the contents in a single div-->
+  <button @click="switch_">Click</button>
 
-    <!--
-    <div v-for="x in array" :key="x">{{ x }}</div>
-    -->
-    <!--
-    <div v-for="x in array" :key="x">{{ x }}</div>
-    -->
-    <!--
-    <div v-for="x in array" :key="x">{{x}}</div>
-    -->
-    <!--
-    <h1 v-for="x in array" :key="x">{{x}}</h1>
-    -->
-    <!--
-    <h1 v-for="numbers in array" :key="numbers">{{ numbers }}</h1>
-    -->
-
-    <!--Use directive to print all the names of the phone book-->
-    <!-- 
-    <h1 v-for="names in phone_book.name" :key="names">{{names}}</h1>
-    -->
-    <!-- 
-    <h1 v-for="names in phone_book" :key="names">
-      {{ names.name }}
-    </h1>
-    -->
-    <!-- 
-    <h1 v-for="names in phone_book" :key="names" >
-      {{ names.name }}
-    </h1>
-    -->
-    <!-- 
-    <h1 v-for="names in phone_book" :key="names">
-      {{ names.name }}
-    </h1>
-    -->
-
-    <!--Use directive to print all the numbers of the phone book -->
-    <!--
-    <h1 v-for="numbers in phone_book" :key="numbers">
-      {{numbers.number}}
-    </h1>
-    -->
-    <!--
-    <h1 v-for="numbers in phone_book" :key="numbers">
-      {{ numbers.number }}
-    </h1>
-    -->
-
-    <!--Use directive to print all the names & numbers of the phone book -->
-    <!--
-    <h1 v-for="all in phone_book" :key="all">
-      {{ all.name }} {{ all.number }}
-    </h1>
-    -->
-
-    <!--Using directives, change colors of certain names and numbers-->
-    <!--
-    <h1 v-for="custom in phone_book" :key="custom">
-      <p v-if="custom.name=='Code'" style="color:red">
-        {{ custom.name }}
-      </p>
-      <p v-else style="color:black">
-        {{ custom.name }}
-      </p>
-    </h1>
-    -->
-    <!--
-    <h1 v-for="custom in phone_book" :key="custom">
-      <p v-if="custom.name=='Code'" style="color:red">
-        {{ custom.name }}
-      </p>
-      <p v-else style="color:gray">
-        {{ custom.name }}
-      </p>
-    </h1>
-    -->
-    <!--
-    <h1 v-for="custom in phone_book" :key="custom">
-      <p v-if="custom.name=='Code'" style="color: red">
-        {{ custom.name}}
-      </p>
-      <p v-else>
-        {{custom.name}}
-      </p>
-    </h1>
-    -->
-
-    <!--Create a button, on press show an alert-->
-  <!--
-  <button @click="testing">Click Me🥺</button>
-  -->
-  <!--
-  <button @click="testing">Click Me</button>
-  -->
-  <button @click="testing">Click</button>
+  <div v-show="show">
+    <h1>Hello!</h1>
   </div>
+
   
+</div>
 </template>
 
 <script>
@@ -116,23 +26,15 @@ export default {
         { name: 'Ethereal', number: '003'},
         { name: 'Bad', number: '004'},
         { name: 'Attitude', number: '005'}
-      ]
+      ],
+      show: 0
     }
   },
   methods: {
-    testing() {
-      alert('A')
-      this.testing_2();
-      
-    },
-    testing_2() {
-      alert('B')
-      this.testing_3();
-    },
-    testing_3() {
-      alert('C')
+      switch_() {
+        this.show = !this.show
+      }
     }
-  }
 }
 </script>
 
