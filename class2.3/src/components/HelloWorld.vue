@@ -88,6 +88,15 @@
       </p>
     </h1>
     -->
+
+    <!--Create a button, on press show an alert-->
+  <!--
+  <button @click="testing">Click Me🥺</button>
+  -->
+  <!--
+  <button @click="testing">Click Me</button>
+  -->
+  <button @click="testing">Click</button>
   </div>
   
 </template>
@@ -108,6 +117,20 @@ export default {
         { name: 'Bad', number: '004'},
         { name: 'Attitude', number: '005'}
       ]
+    }
+  },
+  methods: {
+    testing() {
+      alert('A')
+      this.testing_2();
+      
+    },
+    testing_2() {
+      alert('B')
+      this.testing_3();
+    },
+    testing_3() {
+      alert('C')
     }
   }
 }
