@@ -1,5 +1,8 @@
 <template>
   <div>
+    <input type="text" v-model="user">
+    User Input: {{ user }}
+
     <button @click="switch_">Click</button>
     {{ show }}
     <div v-show="show">
@@ -13,6 +16,7 @@
 export default {
   data () {
     return {
+      user: "",
       value: 'Testing!',
       string: 'CodeSlinger',
       num: 17,
