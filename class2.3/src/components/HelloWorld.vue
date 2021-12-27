@@ -51,9 +51,43 @@
     -->
 
     <!--Use directive to print all the names & numbers of the phone book -->
+    <!--
     <h1 v-for="all in phone_book" :key="all">
       {{ all.name }} {{ all.number }}
     </h1>
+    -->
+
+    <!--Using directives, change colors of certain names and numbers-->
+    <!--
+    <h1 v-for="custom in phone_book" :key="custom">
+      <p v-if="custom.name=='Code'" style="color:red">
+        {{ custom.name }}
+      </p>
+      <p v-else style="color:black">
+        {{ custom.name }}
+      </p>
+    </h1>
+    -->
+    <!--
+    <h1 v-for="custom in phone_book" :key="custom">
+      <p v-if="custom.name=='Code'" style="color:red">
+        {{ custom.name }}
+      </p>
+      <p v-else style="color:gray">
+        {{ custom.name }}
+      </p>
+    </h1>
+    -->
+    <!--
+    <h1 v-for="custom in phone_book" :key="custom">
+      <p v-if="custom.name=='Code'" style="color: red">
+        {{ custom.name}}
+      </p>
+      <p v-else>
+        {{custom.name}}
+      </p>
+    </h1>
+    -->
   </div>
   
 </template>
