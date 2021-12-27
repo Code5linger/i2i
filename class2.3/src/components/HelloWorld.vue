@@ -49,6 +49,11 @@
       {{ numbers.number }}
     </h1>
     -->
+
+    <!--Use directive to print all the names & numbers of the phone book -->
+    <h1 v-for="all in phone_book" :key="all">
+      {{ all.name }} {{ all.number }}
+    </h1>
   </div>
   
 </template>
