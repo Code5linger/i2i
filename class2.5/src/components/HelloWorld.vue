@@ -1,10 +1,8 @@
 <template>
   <div>
-    <button @click="switch_">Click ME</button>
-    <h1 v-show="show">
-        Hello!
-      </h1>
-    {{ show }}
+    Write Something>
+    <input type="text" v-model="user_input">
+    <h1>{{ user_input}}</h1>
   </div>
 </template>
 
@@ -12,6 +10,7 @@
 export default {
   data() {
     return {
+      user_input: '',
       test: "abc",
       num: 17,
       array: [
