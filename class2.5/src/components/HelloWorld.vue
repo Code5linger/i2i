@@ -1,6 +1,10 @@
 <template>
   <div>
-    <button @click="alarm_">Click Me▶</button>
+    <button @click="switch_">Click ME</button>
+    <h1 v-show="show">
+        Hello!
+      </h1>
+    {{ show }}
   </div>
 </template>
 
@@ -18,17 +22,14 @@ export default {
         { name: 'AA', number: '002'},
         { name: 'BB', number: '003'},
         { name: 'CC', number: '004'},
-      ]
+      ],
+      show: 0,
     }
   },
   methods: {
-      alarm_(){
-        alert("Test")
-        this.alarm_2();
-      },
-      alarm_2() {
-        alert("B")
-      }
+    switch_() {
+      this.show = !this.show
+    }
   }
 }
 </script>
